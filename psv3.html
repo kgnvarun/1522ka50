@@ -1,0 +1,70 @@
+<!html>
+<head>
+  <meta charset="UTF-8">
+  <title>Registration</title>
+</head>
+<body>
+ 
+<form name="reg" action="code_exec.php" onsubmit="return validateForm()" method="post">
+  <table width="274" border="0" align="center" cellpadding="2" cellspacing="0">
+    <tr>
+      <td colspan="2">
+        <div align="center">
+          <?php 
+          // $remarks=$_GET['remarks'];
+          if (!isset($_GET['remarks']))
+          {
+            echo 'Register Here';
+          }
+          if (isset($_GET['remarks']) && $_GET['remarks']=='success')
+          {
+            echo 'Registration Success';
+          }
+          ?>  
+        </div></td>
+      </tr>
+      <tr>
+        <td width="95"><div align="right">Name:</div></td>
+        <td width="171"><input type="text" name="name" /></td>
+      </tr>
+      
+      <tr>
+        <td><div align="right">Gender:</div></td>
+        <td><input type="text" name="gender" /></td>
+      </tr>
+     
+	 <tr>
+        <td><div align="right">DOB:</div></td>
+        <td><input type="text" name="DOB" /></td>
+      </tr>
+      <tr>
+	  <td><div align="right">Department:</div></td>
+        <td><input type="text" name="Department" /></td>
+      </tr>
+	 <tr>
+	  <td><div align="right">year of joining:</div></td>
+        <td><input type="text" name="year of joining" /></td>
+      </tr>
+	  <td><div align="right">name of posting:</div></td>
+        <td><input type="text" name="name of posting" /></td>
+      </tr>
+	  
+        <td><div align="right">Contact No.:</div></td>
+        <td><input type="text" name="contact" /></td>
+      </tr>
+      <tr>
+        <td><div align="right">Username:</div></td>
+        <td><input type="text" name="username" /></td>
+      </tr>
+      <tr>
+        <td><div align="right">Password:</div></td>
+        <td><input type="text" name="password" /></td>
+      </tr>
+      <tr>
+        <td><div align="right"></div></td>
+        <td><input name="submit" type="submit" value="Submit" /></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
